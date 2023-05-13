@@ -1,0 +1,26 @@
+@import url("fonts/Montserrat-VariableFont_wght.ttf");
+
+window {
+    background-color: white;
+    color: black;
+    font-family: 'Montserrat';
+    font-weight: normal;
+}
+
+button {
+    background-color: turquoise;
+    border-radius: 10px;
+}
+
+.active {
+    border: 5px solid black;
+}
+
+button:disabled, button:active {
+    background-color: lightblue;
+}
+
+* {
+    border-width: 0;
+    border-style: none;
+}
