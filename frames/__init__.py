@@ -1,4 +1,4 @@
-from .fn_frame import FunctionFrame
+from .general_frame import GeneralFrame
 from .lights_frame import LightsFrame
 from .projector_frame import ProjectorFrame
 from .scene_frame import SceneFrame

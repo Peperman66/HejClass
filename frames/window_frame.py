@@ -7,26 +7,26 @@ class WindowFrame(Gtk.Frame):
 
 
     def __add_elements(self):
-        self.box = Gtk.Box()
-        self.all_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        self.grid = Gtk.Grid()
-        self.box.pack_end(self.grid, True, True, 10)
-        self.box.pack_start(self.all_box, True, True, 10)
+        box = Gtk.Box()
+        all_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        grid = Gtk.Grid()
+        box.pack_end(grid, True, True, 10)
+        box.pack_start(all_box, True, True, 10)
 
-        self.all_label = Gtk.Label("VŠE")
-        self.all_up = Gtk.Button("UP")
-        self.all_stop = Gtk.Button("STOP")
-        self.all_down = Gtk.Button("DOWN")
+        all_label = Gtk.Label("VŠE")
+        all_up = Gtk.Button("UP")
+        all_stop = Gtk.Button("STOP")
+        all_down = Gtk.Button("DOWN")
 
-        self.all_box.pack_start(self.all_label, True, True, 10)
-        self.all_box.pack_start(self.all_up, True, True, 10)
-        self.all_box.pack_start(self.all_stop, True, True, 10)
-        self.all_box.pack_start(self.all_down, True, True, 10)
+        all_box.pack_start(all_label, True, True, 10)
+        all_box.pack_start(all_up, True, True, 10)
+        all_box.pack_start(all_stop, True, True, 10)
+        all_box.pack_start(all_down, True, True, 10)
 
         # Grid
         for i, text in enumerate(["PŘEDNÍ OKNO", "STŘEDNÍ OKNO", "ZADNÍ OKNO"]):
             label = Gtk.Label(text)
-            self.grid.attach(label, i, 0, 1, 1)
+            grid.attach(label, i, 0, 1, 1)
             label.show()
 
         for i in range(3):
@@ -34,29 +34,29 @@ class WindowFrame(Gtk.Frame):
             stop = Gtk.Button("STOP")
             down = Gtk.Button("DOWN")
 
-            self.grid.attach(up, i, 1, 1, 1)
-            self.grid.attach(stop, i, 2, 1, 1)
-            self.grid.attach(down, i, 3, 1, 1)
+            grid.attach(up, i, 1, 1, 1)
+            grid.attach(stop, i, 2, 1, 1)
+            grid.attach(down, i, 3, 1, 1)
 
             up.show()
             stop.show()
             down.show()
 
-        self.grid.set_column_homogeneous(True)
-        self.grid.set_row_homogeneous(True)
-        self.grid.set_row_spacing(20)
-        self.grid.set_column_spacing(20)
-        self.grid.set_vexpand(True)
-        self.grid.set_hexpand(True)
+        grid.set_column_homogeneous(True)
+        grid.set_row_homogeneous(True)
+        grid.set_row_spacing(20)
+        grid.set_column_spacing(20)
+        grid.set_vexpand(True)
+        grid.set_hexpand(True)
         # self.grid.props.margin_top = 10
-        self.grid.props.margin_bottom = 10
+        grid.props.margin_bottom = 10
 
-        self.all_label.show()
-        self.all_up.show()
-        self.all_stop.show()
-        self.all_down.show()
+        all_label.show()
+        all_up.show()
+        all_stop.show()
+        all_down.show()
 
-        self.box.show()
-        self.all_box.show()
-        self.grid.show()
-        self.add(self.box)
+        box.show()
+        all_box.show()
+        grid.show()
+        self.add(box)
