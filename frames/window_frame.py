@@ -13,15 +13,20 @@ class WindowFrame(Gtk.Frame):
         box.pack_end(grid, True, True, 10)
         box.pack_start(all_box, True, True, 10)
 
+        # box.get_style_context().add_class("borders")
+
         all_label = Gtk.Label("VŠE")
         all_up = Gtk.Button("UP")
         all_stop = Gtk.Button("STOP")
         all_down = Gtk.Button("DOWN")
 
-        all_box.pack_start(all_label, True, True, 10)
-        all_box.pack_start(all_up, True, True, 10)
-        all_box.pack_start(all_stop, True, True, 10)
-        all_box.pack_start(all_down, True, True, 10)
+        all_box.pack_start(all_label, True, True, 0)
+        all_box.pack_start(all_up, True, True, 0)
+        all_box.pack_start(all_stop, True, True, 0)
+        all_box.pack_start(all_down, True, True, 0)
+
+        all_box.props.spacing = 20
+        all_box.props.homogeneous = True
 
         # Grid
         for i, text in enumerate(["PŘEDNÍ OKNO", "STŘEDNÍ OKNO", "ZADNÍ OKNO"]):
@@ -48,8 +53,9 @@ class WindowFrame(Gtk.Frame):
         grid.set_column_spacing(20)
         grid.set_vexpand(True)
         grid.set_hexpand(True)
-        # self.grid.props.margin_top = 10
-        grid.props.margin_bottom = 10
+        # grid.get_style_context().add_class("window_grid")
+        # grid.props.margin_top = 10
+        # grid.props.margin_bottom = 10
 
         all_label.show()
         all_up.show()

@@ -49,8 +49,6 @@ class LightsFrame(Gtk.Frame):
         grid.set_column_spacing(20)
         grid.set_vexpand(True)
         grid.set_hexpand(True)
-        grid.props.margin_top = -5
-        grid.props.margin_bottom = 10
 
         all_label.show()
         all_on.show()
