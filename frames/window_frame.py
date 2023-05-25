@@ -20,10 +20,10 @@ class WindowFrame(Gtk.Frame):
         all_stop = Gtk.Button("STOP")
         all_down = Gtk.Button("DOWN")
 
-        all_box.pack_start(all_label, True, True, 0)
-        all_box.pack_start(all_up, True, True, 0)
-        all_box.pack_start(all_stop, True, True, 0)
-        all_box.pack_start(all_down, True, True, 0)
+        all_box.pack_start(all_label, True, True, 10)
+        all_box.pack_start(all_up, True, True, 10)
+        all_box.pack_start(all_stop, True, True, 10)
+        all_box.pack_start(all_down, True, True, 10)
 
         all_box.props.spacing = 20
         all_box.props.homogeneous = True
@@ -51,7 +51,7 @@ class WindowFrame(Gtk.Frame):
         grid.set_row_homogeneous(True)
         grid.set_row_spacing(20)
         grid.set_column_spacing(20)
-        grid.set_vexpand(True)
+        # grid.set_vexpand(True)
         grid.set_hexpand(True)
         # grid.get_style_context().add_class("window_grid")
         # grid.props.margin_top = 10

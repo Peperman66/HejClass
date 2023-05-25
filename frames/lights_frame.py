@@ -20,6 +20,8 @@ class LightsFrame(Gtk.Frame):
         all_box.pack_start(all_label, True, True, 10)
         all_box.pack_start(all_on, True, True, 10)
         all_box.pack_start(all_off, True, True, 10)
+
+        all_box.props.spacing = 20
         all_box.set_homogeneous(True)
 
         # Grid
