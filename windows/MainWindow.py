@@ -6,6 +6,9 @@ class MainWindow(Gtk.ApplicationWindow):
     def __init__(self, start_screen, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+        self.set_default_size(1280, 720)
+        self.set_resizable(False)
+
         screen = Gdk.Screen.get_default()
         provider = Gtk.CssProvider()
         style_context = Gtk.StyleContext()
