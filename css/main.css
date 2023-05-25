@@ -1,6 +1,5 @@
 @import url("fonts/Montserrat-VariableFont_wght.ttf");
 
-
 window {
     background-color: white;
     color: black;
@@ -8,13 +7,13 @@ window {
     font-weight: normal;
 }
 
-button {
-    background-color: turquoise;
+button, .blue {
+    background-color: #0060A1;
     border-radius: 10px;
 }
 
 .borders * {
-    border: 5px solid blue
+    border: 1px dashed blue
 }
 
 .window_grid {
@@ -22,12 +21,19 @@ button {
     padding-bottom: 10px;
 }
 
-.active {
+#home-button-row .active {
     border: 5px solid black;
+    margin: 5px;
 }
 
 button:disabled, button:active {
-    background-color: lightblue;
+    background-color: #528ab8;;
+}
+
+#home-button-row box button {
+    margin: 10px;
+    min-width: 220px;
+    min-height: 220px;
 }
 
 * {
