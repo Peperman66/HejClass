@@ -20,8 +20,8 @@ class GeneralFrame(Gtk.Frame):
         light_on = AspectButton(1, "ZAP")
         light_off = AspectButton(1, "VYP")
 
-        light_on.get_style_context().add_class("text-large")
-        light_off.get_style_context().add_class("text-large")
+        light_on.get_style_context().add_class("text-xxl")
+        light_off.get_style_context().add_class("text-xxl")
 
         light_box.pack_start(light_on, True, True, 0)
         light_box.pack_end(light_off, True, True, 0)
@@ -40,9 +40,9 @@ class GeneralFrame(Gtk.Frame):
         window_stop = AspectButton(1, "STOP")
         window_down = AspectButton(1, "DOWN")
 
-        window_up.get_style_context().add_class("text-medium")
-        window_stop.get_style_context().add_class("text-medium")
-        window_down.get_style_context().add_class("text-medium")
+        window_up.get_style_context().add_class("text-large")
+        window_stop.get_style_context().add_class("text-large")
+        window_down.get_style_context().add_class("text-large")
 
         window_box.pack_start(window_up, True, True, 0)
         window_box.pack_start(window_stop, True, True, 0)
@@ -62,8 +62,8 @@ class GeneralFrame(Gtk.Frame):
         projector_on = AspectButton(1, "ZAP")
         projector_off = AspectButton(1, "VYP")
 
-        projector_on.get_style_context().add_class("text-large")
-        projector_off.get_style_context().add_class("text-large")
+        projector_on.get_style_context().add_class("text-xxl")
+        projector_off.get_style_context().add_class("text-xxl")
 
         projector_box.pack_start(projector_on, True, True, 0)
         projector_box.pack_end(projector_off, True, True, 0)
