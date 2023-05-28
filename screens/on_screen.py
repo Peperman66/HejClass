@@ -22,9 +22,6 @@ class OnScreen(Gtk.Frame):
 
     def __add_elements(self):
         from frames import HomeButtonRow, GeneralFrame
-
-        self.get_style_context().add_class("borders")
-
         self.box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         self.box.props.name = "on-box"
         button_row = HomeButtonRow(self.__change_other_screen, self.__change_screen)
