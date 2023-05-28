@@ -32,7 +32,7 @@ class LightsFrame(Gtk.Frame):
         all_box.pack_start(all_on, True, True, 0)
         all_box.pack_start(all_off, True, True, 0)
 
-        all_box.props.spacing = 20
+        all_box.props.spacing = 10
 
         # Grid
         for i, text in enumerate(["LEVÁ ŘADA", "STŘEDNÍ ŘADA", "PRAVÁ ŘADA", "TABULE"]):
@@ -66,7 +66,7 @@ class LightsFrame(Gtk.Frame):
 
         grid.set_column_homogeneous(True)
         grid.set_row_homogeneous(False)
-        grid.set_row_spacing(20)
+        grid.set_row_spacing(10)
         # grid.set_column_spacing(20)
         grid.set_vexpand(True)
         grid.set_hexpand(True)
