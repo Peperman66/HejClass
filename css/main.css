@@ -21,13 +21,20 @@ button, .blue {
     padding-bottom: 10px;
 }
 
+.button-wide {
+    min-height: 110px;
+    min-width: 250px;
+    font-size: 3em;
+    font-weight: bold;
+}
+
 #home-button-row .active {
     border: 5px solid black;
     margin: 5px;
 }
 
 button:disabled, button:active {
-    background-color: #528ab8;;
+    background-color: #528ab8;
 }
 
 #home-button-row box button {

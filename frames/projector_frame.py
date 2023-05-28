@@ -19,6 +19,16 @@ class ProjectorFrame(Gtk.Frame):
         grid.attach(freeze_button, 1, 1, 1, 1)
         grid.attach(ports_button, 2, 0, 1, 2)
 
+        buttons = [on_button, off_button, mute_button, freeze_button, ports_button]
+        for button in buttons:
+            button.get_style_context().add_class("button-wide")
+            button.set_hexpand(False)
+            button.set_vexpand(False)
+            button.set_halign(Gtk.Align.CENTER)
+            button.set_valign(Gtk.Align.CENTER)
+
+        ports_button.set_sensitive(False)
+
         grid.set_row_homogeneous(True)
         grid.set_column_homogeneous(True)
 
