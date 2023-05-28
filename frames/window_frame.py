@@ -29,6 +29,9 @@ class WindowFrame(Gtk.Frame):
         all_box.pack_start(all_down, True, True, 0)
 
         all_label.get_style_context().add_class("text-medium")
+        all_up.get_style_context().add_class("text-medium")
+        all_stop.get_style_context().add_class("text-medium")
+        all_down.get_style_context().add_class("text-medium")
 
         all_buttons = [all_up, all_stop, all_down]
         for button in all_buttons:
@@ -37,7 +40,7 @@ class WindowFrame(Gtk.Frame):
         all_label.set_halign(Gtk.Align.CENTER)
         all_label.set_valign(Gtk.Align.CENTER)
 
-        all_box.props.spacing = 20
+        all_box.props.spacing = 10
         all_box.props.homogeneous = False
 
         # Grid
@@ -58,6 +61,10 @@ class WindowFrame(Gtk.Frame):
             stop.set_vexpand(True)
             down.set_vexpand(True)
 
+            up.get_style_context().add_class("text-medium")
+            stop.get_style_context().add_class("text-medium")
+            down.get_style_context().add_class("text-medium")
+
             grid.attach(up, i, 1, 1, 1)
             grid.attach(stop, i, 2, 1, 1)
             grid.attach(down, i, 3, 1, 1)
@@ -68,7 +75,7 @@ class WindowFrame(Gtk.Frame):
 
         grid.set_column_homogeneous(True)
         grid.set_row_homogeneous(False)
-        grid.set_row_spacing(20)
+        grid.set_row_spacing(10)
         # grid.set_column_spacing(20)
         # grid.set_vexpand(True)
         grid.set_hexpand(True)
