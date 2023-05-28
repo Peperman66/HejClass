@@ -54,6 +54,8 @@ class HomeButtonRow(Gtk.Frame):
             buttons[i].connect("clicked", lambda _, x=i: self.__on_click(x))
             self.box.pack_start(buttons[i], True, False, 20)
             buttons[i].show()
+
+        buttons[-1].get_style_context().add_class("red")
             
         self.add(self.box)
         self.props.name = "home-button-row"

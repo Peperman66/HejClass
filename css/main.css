@@ -9,7 +9,11 @@ window {
 
 button, .blue {
     background-color: #0060A1;
-    border-radius: 10px;
+    border-radius: 20%;
+}
+
+.red {
+    background-color: red;
 }
 
 .borders * {
@@ -25,6 +29,7 @@ button, .blue {
     min-height: 110px;
     min-width: 250px;
     font-size: 3em;
+    border-radius: 20px;
 }
 
 .button-small {
