@@ -45,7 +45,7 @@ class HomeButtonRow(Gtk.Frame):
         buttons: List[Gtk.Button] = [Gtk.Button() for _ in button_filenames]
 
         for i, name in enumerate(button_filenames):
-            pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(f"images/{name}", 200, 200, True)
+            pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(f"images/{name}", 160, 160, True)
             image = Gtk.Image.new_from_pixbuf(pixbuf)
 
             buttons[i].set_image(image)
