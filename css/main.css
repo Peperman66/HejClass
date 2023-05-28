@@ -25,7 +25,22 @@ button, .blue {
     min-height: 110px;
     min-width: 250px;
     font-size: 3em;
-    font-weight: bold;
+    font-weight: 700;
+}
+
+.button-medium {
+    min-height: 160px;
+    min-width: 160px;
+}
+
+.button-small {
+    min-height: 110px;
+    min-width: 110px;
+}
+
+.text-medium {
+    font-size: 2em;
+    font-weight: 700;
 }
 
 #home-button-row .active {
