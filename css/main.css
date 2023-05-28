@@ -12,6 +12,10 @@ button, .blue {
     border-radius: 20%;
 }
 
+button.red:active {
+    background-color: pink;
+}
+
 .red {
     background-color: red;
 }
@@ -57,16 +61,16 @@ button, .blue {
 }
 
 #home-button-row .active {
-    border: 5px solid black;
-    margin: 5px;
+    border: 10px solid black;
+    margin: 10px;
 }
 
-button:disabled, button:active {
+button:disabled, button:active, blue {
     background-color: #528ab8;
 }
 
 #home-button-row box button {
-    margin: 10px;
+    margin: 20px;
     min-width: 220px;
     min-height: 220px;
 }
