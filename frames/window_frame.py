@@ -1,5 +1,6 @@
 from gi.repository import Gtk
 from widgets import AspectButton
+from handlers import window_handler
 
 class WindowFrame(Gtk.Frame):
     def __init__(self, *args, **kwargs):
@@ -22,6 +23,10 @@ class WindowFrame(Gtk.Frame):
         all_up = AspectButton(1, "UP")
         all_stop = AspectButton(1, "STOP")
         all_down = AspectButton(1, "DOWN")
+
+        all_up.button.connect("clicked", lambda _: window_handler.run("all", False))
+        all_stop.button.connect("clicked", lambda _: window_handler.stop("all"))
+        all_down.button.connect("clicked", lambda _: window_handler.run("all", True))
 
         all_box.pack_start(all_label, False, False, 0)
         all_box.pack_start(all_up, True, True, 0)
@@ -52,10 +57,15 @@ class WindowFrame(Gtk.Frame):
             label.get_style_context().add_class("text-medium")
             label.show()
 
+        row_names = ["front", "middle", "rear"]
         for i in range(3):
             up = AspectButton(1, "UP")
             stop = AspectButton(1, "STOP")
             down = AspectButton(1, "DOWN")
+
+            up.button.connect("clicked", lambda _, x=i: window_handler.run(row_names[x], False))
+            stop.button.connect("clicked", lambda _, x=i: window_handler.stop(row_names[x]))
+            down.button.connect("clicked", lambda _, x=i: window_handler.run(row_names[x], True))
 
             up.set_vexpand(True)
             stop.set_vexpand(True)
