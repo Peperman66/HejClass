@@ -1,5 +1,6 @@
 from gi.repository import Gtk
 from widgets import AspectButton
+from handlers import light_handler
 
 class LightsFrame(Gtk.Frame):
     def __init__(self, *args, **kwargs):
@@ -21,6 +22,9 @@ class LightsFrame(Gtk.Frame):
         all_on = AspectButton(1, "1")
         all_off = AspectButton(1, "0")
 
+        all_on.button.connect("clicked", lambda _: light_handler.set("all", True))
+        all_off.button.connect("clicked", lambda _: light_handler.set("all", False))
+
         all_on.props.margin_bottom = 20
         all_off.props.margin_top = 20
 
@@ -41,9 +45,13 @@ class LightsFrame(Gtk.Frame):
             label.get_style_context().add_class("text-medium")
             label.show()
 
+        row_names = ["left", "middle", "right", "board"]
         for i in range(4):
             full = AspectButton(1, "1")
             none = AspectButton(1, "0")
+
+            full.button.connect("clicked", lambda _, x=i: light_handler.set(row_names[x], True))
+            none.button.connect("clicked", lambda _, x=i: light_handler.set(row_names[x], False))
 
             if i < 3:
                 half = AspectButton(1, "1/2")
