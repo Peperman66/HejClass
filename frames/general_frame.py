@@ -1,5 +1,6 @@
 from gi.repository import Gtk
 from widgets import AspectButton
+from handlers import light_handler, window_handler
 
 class GeneralFrame(Gtk.Frame):
     def __init__(self, *args, **kwargs):
@@ -20,6 +21,9 @@ class GeneralFrame(Gtk.Frame):
         light_on = AspectButton(1, "ZAP")
         light_off = AspectButton(1, "VYP")
 
+        light_on.button.connect("clicked", lambda _: light_handler.set("all", True))
+        light_off.button.connect("clicked", lambda _: light_handler.set("all", False))
+
         light_on.get_style_context().add_class("text-xxl")
         light_off.get_style_context().add_class("text-xxl")
 
@@ -39,6 +43,10 @@ class GeneralFrame(Gtk.Frame):
         window_up = AspectButton(1, "UP")
         window_stop = AspectButton(1, "STOP")
         window_down = AspectButton(1, "DOWN")
+
+        window_up.button.connect("clicked", lambda _: window_handler.run("all", False))
+        window_stop.button.connect("clicked", lambda _: window_handler.stop("all"))
+        window_down.button.connect("clicked", lambda _: window_handler.run("all", True))
 
         window_up.get_style_context().add_class("text-large")
         window_stop.get_style_context().add_class("text-large")
