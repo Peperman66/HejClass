@@ -34,6 +34,7 @@ class OffScreen(Gtk.Frame):
 
         [x.get_style_context().add_class("text-xl") for x in [self.time_label, self.date_label]]
         text_label.get_style_context().add_class("text-medium")
+        text_label.get_style_context().add_class("text-italics")
 
         center_box.pack_start(self.time_label, False, False, 0)
         center_box.pack_start(self.date_label, False, False, 0)

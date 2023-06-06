@@ -60,6 +60,10 @@ button.red:active {
     font-size: 2em;
 }
 
+.text-italics {
+    font-style: italic;
+}
+
 #home-button-row .active {
     border: 10px solid black;
     margin: 10px;
