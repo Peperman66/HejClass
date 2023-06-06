@@ -15,6 +15,9 @@ class Pin(LED):
     def off(self):
         super().off()
         self.print_state()
+
+    def set_state(self, state):
+        self.on() if state else self.off()
     
     def toggle(self):
         super().toggle()
