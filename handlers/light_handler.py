@@ -1,34 +1,22 @@
 from .pin_handler import light_pins
+from typing import Union
 
 class LightHandler():
     def __init__(self):
         pass
 
-    def on(side: "left" | "middle" | "right" | "board" | "all"):
+    def set(self, side: Union["left", "middle", "right", "board", "all"], value: bool):
         if side == "left" or side == "all":
-            light_pins["left"].on()
+            light_pins["left"].set_state(value)
         
         if side == "middle" or side == "all":
-            light_pins["middle"].on()
+            light_pins["middle"].set_state(value)
 
         if side == "right" or side == "all":
-            light_pins["right"].on()
+            light_pins["right"].set_state(value)
 
         if side == "board" or side == "all":
-            light_pins["board"].on()
-
-    def off(side: "left" | "middle" | "right" | "board" | "all"):
-        if side == "left" or side == "all":
-            light_pins["left"].off()
-        
-        if side == "middle" or side == "all":
-            light_pins["middle"].off()
-
-        if side == "right" or side == "all":
-            light_pins["right"].off()
-
-        if side == "board" or side == "all":
-            light_pins["board"].off()
+            light_pins["board"].set_state(value)
 
 
 light_handler = LightHandler()

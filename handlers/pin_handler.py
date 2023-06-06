@@ -3,10 +3,7 @@ from typing import Dict
 
 class Pin(LED):
     def __init__(self, pin=None, active_high=True, initial_value=False, *args, **kwargs):
-        try:
-            super().__init__(pin, active_high, initial_value, *args, **kwargs)
-        except exc.BadPinFactory():
-            print("Probably not running on RPi!")
+        super().__init__(pin, active_high, initial_value, *args, **kwargs)
 
     def on(self):
         super().on()
@@ -17,7 +14,10 @@ class Pin(LED):
         self.print_state()
 
     def set_state(self, state):
-        self.on() if state else self.off()
+        if state is True:
+            self.on()
+        else:
+            self.off()
     
     def toggle(self):
         super().toggle()
@@ -52,10 +52,10 @@ light_pins: Dict[str, Pin] = {
 }
 
 window_pins: Dict[str, Pin] = {
-    "left_direction": all_pins["5"],
-    "left_control": all_pins["6"],
+    "front_direction": all_pins["5"],
+    "front_control": all_pins["6"],
     "middle_direction": all_pins["7"],
     "middle_control": all_pins["8"],
-    "right_direction": all_pins["9"],
-    "right_control": all_pins["10"]
+    "rear_direction": all_pins["9"],
+    "rear_control": all_pins["10"]
 }
