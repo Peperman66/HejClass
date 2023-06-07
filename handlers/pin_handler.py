@@ -30,18 +30,22 @@ class Pin(LED):
         return self.value
 
 all_pins: Dict[str, Pin] = {
-    "1": Pin("GPIO4", active_high = False, initial_value=True),
-    "2": Pin("GPIO17", active_high = False, initial_value=True),
-    "3": Pin("GPIO27", active_high = False, initial_value=True),
-    "4": Pin("GPIO22", active_high = False, initial_value=True),
-    "5": Pin("GPIO5", active_high = False, initial_value=True),
-    "6": Pin("GPIO6", active_high = False, initial_value=True),
-    "7": Pin("GPIO13", active_high = False, initial_value=True),
-    "8": Pin("GPIO26", active_high = False, initial_value=True),
-    "9": Pin("GPIO16", active_high = False, initial_value=True),
-    "10": Pin("GPIO12", active_high = False, initial_value=True),
-    "11": Pin("GPIO24", active_high = False, initial_value=True),
-    "12": Pin("GPIO23", active_high = False, initial_value=True)
+    "1": Pin("GPIO2", active_high = False, initial_value=True),
+    "2": Pin("GPIO3", active_high = False, initial_value=True),
+    "3": Pin("GPIO4", active_high = False, initial_value=True),
+    "4": Pin("GPIO17", active_high = False, initial_value=True),
+    "5": Pin("GPIO27", active_high = False, initial_value=True),
+    "6": Pin("GPIO22", active_high = False, initial_value=True),
+    "7": Pin("GPIO23", active_high = False, initial_value=True),
+    "8": Pin("GPIO24", active_high = False, initial_value=True),
+    "9": Pin("GPIO10", active_high = False, initial_value=True),
+    "10": Pin("GPIO9", active_high = False, initial_value=True),
+    "11": Pin("GPIO25", active_high = False, initial_value=True),
+    "12": Pin("GPIO11", active_high = False, initial_value=True),
+    "13": Pin("GPIO8", active_high = False, initial_value=True),
+    "14": Pin("GPIO7", active_high = False, initial_value=True),
+    "15": Pin("GPIO1", active_high = False, initial_value=True),
+    "16": Pin("GPIO0", active_high = False, initial_value=True),
 }
 
 light_pins: Dict[str, Pin] = {
