@@ -22,8 +22,8 @@ class LightsFrame(Gtk.Frame):
         all_on = AspectButton(1, "1")
         all_off = AspectButton(1, "0")
 
-        all_on.button.connect("clicked", lambda _: light_handler.set("all", True))
-        all_off.button.connect("clicked", lambda _: light_handler.set("all", False))
+        all_on.button.connect("clicked", lambda _: light_handler.set("all", "on"))
+        all_off.button.connect("clicked", lambda _: light_handler.set("all", "off"))
 
         all_on.props.margin_bottom = 20
         all_off.props.margin_top = 20
@@ -50,11 +50,12 @@ class LightsFrame(Gtk.Frame):
             full = AspectButton(1, "1")
             none = AspectButton(1, "0")
 
-            full.button.connect("clicked", lambda _, x=i: light_handler.set(row_names[x], True))
-            none.button.connect("clicked", lambda _, x=i: light_handler.set(row_names[x], False))
+            full.button.connect("clicked", lambda _, x=i: light_handler.set(row_names[x], "on"))
+            none.button.connect("clicked", lambda _, x=i: light_handler.set(row_names[x], "off"))
 
             if i < 3:
                 half = AspectButton(1, "1/2")
+                half.button.connect("clicked", lambda _, x=i: light_handler.set(row_names[x], "half"))
                 grid.attach(half, i, 2, 1, 1)
                 half.set_vexpand(True)
                 half.get_style_context().add_class("text-xl")

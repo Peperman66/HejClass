@@ -21,8 +21,8 @@ class GeneralFrame(Gtk.Frame):
         light_on = AspectButton(1, "ZAP")
         light_off = AspectButton(1, "VYP")
 
-        light_on.button.connect("clicked", lambda _: light_handler.set("all", True))
-        light_off.button.connect("clicked", lambda _: light_handler.set("all", False))
+        light_on.button.connect("clicked", lambda _: light_handler.set("all", "on"))
+        light_off.button.connect("clicked", lambda _: light_handler.set("all", "off"))
 
         light_on.get_style_context().add_class("text-xxl")
         light_off.get_style_context().add_class("text-xxl")
