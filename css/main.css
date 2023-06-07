@@ -10,6 +10,7 @@ window {
 button, .blue {
     background-color: #0060A1;
     border-radius: 20%;
+    color: white
 }
 
 button.red:active {
