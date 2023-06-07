@@ -24,7 +24,7 @@ class Pin(LED):
         self.print_state()
     
     def print_state(self):
-        print(f"{self.pin.number}: {self._active_state}")
+        print(f"{self.pin.number}: {self.is_active}")
 
     def get_state(self):
         return self.value
