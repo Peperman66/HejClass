@@ -19,6 +19,7 @@ class Application(Gtk.Application):
             self.window = MainWindow(OnScreen, application=self, title="HejClass")
 
         self.window.present()
+        self.window.fullscreen()
 
 if __name__ == "__main__":
     app = Application()
