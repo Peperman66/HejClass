@@ -45,7 +45,7 @@ class GeneralFrame(Gtk.Frame):
         window_down = AspectButton(1, "DOWN")
 
         window_up.button.connect("clicked", lambda _: window_handler.run("all", False))
-        window_stop.button.connect("clicked", lambda _: window_handler.stop("all"))
+        window_stop.button.connect("clicked", lambda _: window_handler.stop())
         window_down.button.connect("clicked", lambda _: window_handler.run("all", True))
 
         window_up.get_style_context().add_class("text-large")

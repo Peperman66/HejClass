@@ -25,7 +25,7 @@ class WindowFrame(Gtk.Frame):
         all_down = AspectButton(1, "DOWN")
 
         all_up.button.connect("clicked", lambda _: window_handler.run("all", False))
-        all_stop.button.connect("clicked", lambda _: window_handler.stop("all"))
+        all_stop.button.connect("clicked", lambda _: window_handler.stop())
         all_down.button.connect("clicked", lambda _: window_handler.run("all", True))
 
         all_box.pack_start(all_label, False, False, 0)
@@ -64,7 +64,7 @@ class WindowFrame(Gtk.Frame):
             down = AspectButton(1, "DOWN")
 
             up.button.connect("clicked", lambda _, x=i: window_handler.run(row_names[x], False))
-            stop.button.connect("clicked", lambda _, x=i: window_handler.stop(row_names[x]))
+            stop.button.connect("clicked", lambda _, x=i: window_handler.stop())
             down.button.connect("clicked", lambda _, x=i: window_handler.run(row_names[x], True))
 
             up.set_vexpand(True)
