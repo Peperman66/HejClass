@@ -66,7 +66,7 @@ button.red:active {
 }
 
 #home-button-row .active {
-    border: 10px solid black;
+    border: 10px solid #fa8422;
     margin: 10px;
 }
 
